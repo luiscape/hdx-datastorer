@@ -4,7 +4,7 @@ import urllib
 import json
 
 # The URL from the resource in question.
-resource = "f48a3cf9-110e-4892-bedf-d4c1d725a7d1"  # resource for the ebola database
+resource = "a02903a9-022b-4047-bbb5-45127b591c85"  # resource for the ebola database
 url = "https://data.hdx.rwlabs.org/api/action/resource_show?id="
 response = urllib.urlopen(url + resource);
 data = json.loads(response.read())
@@ -22,5 +22,5 @@ if len(fileUrl) <= 1:
 
 # Downloading the file locally
 else:
-	urllib.urlretrieve (fileUrl, "topline-ebola-figures.csv")
+	urllib.urlretrieve (fileUrl, "data/topline-ebola-outbreak-figures.csv")
 	print "Download worked. :)"

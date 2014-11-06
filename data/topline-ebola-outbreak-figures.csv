@@ -1,0 +1,7 @@
+title,value,latest_date,source,source_link,notes,explore
+Cumulative cases of ebola,13042,2014-11-05,WHO,https://data.hdx.rwlabs.org/dataset/ebola-cases-2014,"It includes probable, confirmed and suspected cases",http://docs.hdx.rwlabs.org/west-africa-ebola-outbreak-visualization/
+Cumulative deaths from ebola,4818,2014-11-05,WHO,https://data.hdx.rwlabs.org/dataset/ebola-cases-2014,"It includes probable, confirmed and suspected cases",http://docs.hdx.rwlabs.org/west-africa-ebola-outbreak-visualization/
+Open ebola treatment centers,15,2014-10-30,WHO,https://data.hdx.rwlabs.org/dataset/etc-overview-status,,http://www.nytimes.com/interactive/2014/07/31/world/africa/ebola-virus-outbreak-qa.html?_r=1
+People receiving food aid,1337886,2014-11-06,WFP,https://data.hdx.rwlabs.org/dataset/wfp-indicators,"Data refers to people receiving food in Sierra Leone, Liberia and Guinea only",
+Appeal coverage,0.581,2014-11-04,OCHA FTS,https://data.hdx.rwlabs.org/dataset/fts-ebola-coverage,,
+Affected countries,6,2014-11-05,WHO,https://data.hdx.rwlabs.org/dataset/ebola-cases-2014,It does not include Nigeria and Senegal as they have been declared ebola free by WHO,
