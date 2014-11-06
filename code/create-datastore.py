@@ -13,7 +13,7 @@ ckan = None
 def runDataStoreUpdater():
 
     # downloading original file
-    os.system('wget https://docs.google.com/spreadsheets/d/1LcGzK41O5xANVxTvympUwBBz_eioQJ7VJqzRh6r5XJc/export?format=csv -O data/topline-ebola-outbreak-figures.csv')
+    os.system('wget https://docs.google.com/spreadsheets/d/1LcGzK41O5xANVxTvympUwBBz_eioQJ7VJqzRh6r5XJc/export?format=csv -O ~/tool/data/topline-ebola-outbreak-figures.csv')
 
 
     # defining the schema
