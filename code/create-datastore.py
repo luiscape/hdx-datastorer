@@ -20,7 +20,7 @@ def runDataStoreUpdater():
     resources = [
         {
             'resource_id': 'a02903a9-022b-4047-bbb5-45127b591c85',
-            'path': 'data/topline-ebola-outbreak-figures.csv',
+            'path': '~/tool/data/topline-ebola-outbreak-figures.csv',
             'schema': {
                 "fields": [
                   { "id": "title", "type": "text" },
