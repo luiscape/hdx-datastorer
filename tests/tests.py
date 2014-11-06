@@ -142,7 +142,7 @@ def runAllTests():
 		checkID(resource_id, api_key)
 		checkDataStore(resource_id, api_key)
 		checkRecords(api_key)
-		checkValue()
+		checkValue(api_key)
 
 		# if everything ok
 		print "All tests passed."
