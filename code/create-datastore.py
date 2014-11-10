@@ -29,7 +29,8 @@ def runDataStoreUpdater():
                   { "id": "source", "type": "text" },
                   { "id": "source_link", "type": "text"},
                   { "id": "notes", "type": "text" },
-                  { "id": "explore", "type": "text" }
+                  { "id": "explore", "type": "text" },
+                  { "id": "units", "type": "text"}
                 ]
             },
         }
