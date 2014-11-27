@@ -11,8 +11,8 @@ ckan = None
 def runDataStoreUpdater():
 
     # downloading original file
-    #     os.system(
-    #         'wget https://docs.google.com/spreadsheets/d/1LcGzK41O5xANVxTvympUwBBz_eioQJ7VJqzRh6r5XJc/export?format=csv -O ' + PATH)
+    os.system(
+            'wget https://docs.google.com/spreadsheets/d/1LcGzK41O5xANVxTvympUwBBz_eioQJ7VJqzRh6r5XJc/export?format=csv -O ' + PATH)
 
     # defining the schema
     # sample csv file for this schema can be found here: https://gist.github.com/alexandru-m-g/15365642de5926fec4f6
