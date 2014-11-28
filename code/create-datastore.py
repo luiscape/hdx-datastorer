@@ -15,7 +15,6 @@ def runDataStoreUpdater():
     # downloading original file
     os.system('wget https://docs.google.com/spreadsheets/d/1LcGzK41O5xANVxTvympUwBBz_eioQJ7VJqzRh6r5XJc/export?format=csv -O ~/tool/data/topline-ebola-outbreak-figures.csv')
 
-
     # defining the schema
     resources = [
         {
@@ -71,10 +70,10 @@ def runDataStoreUpdater():
         if len(sys.argv) <= 2:
             usage = '''python scripts/upload.py {ckan-instance} {api-key}
 
-    e.g.
+            e.g.
 
-    python scripts/upload.py http://datahub.io/ MY-API-KEY
-    '''
+            python scripts/upload.py http://datahub.io/ MY-API-KEY
+            '''
             print(usage)
             sys.exit(1)
 
