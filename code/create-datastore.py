@@ -3,7 +3,6 @@
 
 import os
 import csv
-<<<<<<< HEAD
 import sys
 import json
 import requests
@@ -19,16 +18,10 @@ apikey = sys.argv[2]
 
 # path to the locally stored CSV file
 PATH = 'tool/data/topline-ebola-outbreak-figures.csv'
-=======
-import ckanapi
-
-PATH = '/tmp/topline-ebola-outbreak-figures.csv'
->>>>>>> 2b519108fae43c10389a1c3c4e0e75a54e232e83
 
 # ckan will be an instance of ckan api wrapper
 ckan = None
 
-<<<<<<< HEAD
 # Function to download a resource from CKAN.
 def downloadResource(filename):
 
@@ -83,26 +76,12 @@ def updateDatastore(filename):
 
     # proceed if the hash is different, i.e. update
     print "DataStore Status: New data. Updating datastore."
-=======
-
-def runDataStoreUpdater():
-
-    # downloading original file
-    os.system(
-            'wget https://docs.google.com/spreadsheets/d/1LcGzK41O5xANVxTvympUwBBz_eioQJ7VJqzRh6r5XJc/export?format=csv -O ' + PATH)
->>>>>>> 2b519108fae43c10389a1c3c4e0e75a54e232e83
 
     # defining the schema
-    # sample csv file for this schema can be found here: https://gist.github.com/alexandru-m-g/15365642de5926fec4f6
     resources = [
         {
-<<<<<<< HEAD
             'resource_id': resource_id,
             'path': filename,
-=======
-            'resource_id': 'a02903a9-022b-4047-bbb5-45127b591c85',
-            'path': '/tmp/topline-ebola-outbreak-figures.csv',
->>>>>>> 2b519108fae43c10389a1c3c4e0e75a54e232e83
             'schema': {
                 "fields": [
                     {"id": "code", "type": "text"},
@@ -120,7 +99,6 @@ def runDataStoreUpdater():
         }
     ]
 
-<<<<<<< HEAD
     def upload_data_to_datastore(ckan_resource_id, resource, delete):
 
         # if the delete flag is True, then delete the current
@@ -130,16 +108,6 @@ def runDataStoreUpdater():
                 ckan.action.datastore_delete(resource_id=ckan_resource_id, force=True)
             except:
                 pass
-=======
-    def upload_data_to_datastore(ckan_resource_id, resource):
-
-        # let's delete any existing data before we upload again
-        #         try:
-        #             ckan.action.datastore_delete(
-        #                 resource_id=ckan_resource_id, force=True)
-        #         except:
-        #             pass
->>>>>>> 2b519108fae43c10389a1c3c4e0e75a54e232e83
 
         ckan.action.datastore_create(
             resource_id=ckan_resource_id,
@@ -162,28 +130,16 @@ def runDataStoreUpdater():
             offset += chunksize
             print('Done: %s' % offset)
 
-<<<<<<< HEAD
 
     # if running as a command line script
     if __name__ == '__main__':
         if len(sys.argv) <= 2:
             usage = '''python scripts/create-datastore.py {ckan-resource-id} {api-key}
-=======
-    import sys
-    if __name__ == '__main__':
-        if len(sys.argv) <= 2:
-            usage = '''python create-datastore.py {ckan-instance} {api-key}
->>>>>>> 2b519108fae43c10389a1c3c4e0e75a54e232e83
 
                     e.g.
 
-<<<<<<< HEAD
                     python scripts/create-datastore.py CKAN_RESOURCE_ID API-KEY
                     '''
-=======
-    python create-datastore.py http://localhost:5000/ MY-API-KEY
-    '''
->>>>>>> 2b519108fae43c10389a1c3c4e0e75a54e232e83
             print(usage)
             sys.exit(1)
 
@@ -203,10 +159,9 @@ try:
     runEverything(PATH)
     # if everything ok
     print "Everything seems to be just fine."
-#     scraperwiki.status('ok')
+    scraperwiki.status('ok')
 
 except Exception as e:
     print e
-#     scraperwiki.status('error', 'Creating datastore failed')
-#     os.system(
-#         "mail -s 'Ebola toplines: creating datastore failed.' luiscape@gmail.com")
+    scraperwiki.status('error', 'Creating datastore failed')
+    os.system("mail -s 'Ebola toplines: creating datastore failed.' luiscape@gmail.com")
